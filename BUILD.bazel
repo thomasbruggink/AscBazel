@@ -1,0 +1,38 @@
+load("//asc_tools:asc_build.bzl", "asc_build")
+
+filegroup(
+    name = "node_modules_path",
+    srcs = ["node_modules"],
+    visibility = ["//visibility:public"],
+)
+
+asc_build(
+    name = "test",
+    main = "test.ts",
+    srcs = glob(["src/*.ts"]),
+    visibility = ["//visibility:private"],
+)
+
+asc_build(
+    name = "test-debug",
+    main = "test.ts",
+    sourceMaps = True,
+    srcs = glob(["src/*.ts"]),
+    visibility = ["//visibility:private"],
+)
+
+asc_build(
+    name = "test_text",
+    main = "test.ts",
+    outputType = "text",
+    srcs = glob(["src/*.ts"]),
+    visibility = ["//visibility:private"],
+)
+
+asc_build(
+    name = "test_js",
+    main = "test.ts",
+    outputExt = "js",
+    srcs = glob(["src/*.ts"]),
+    visibility = ["//visibility:private"],
+)

@@ -1,0 +1,17 @@
+load(":asc_toolchain.bzl", "asc_toolchain")
+
+package(default_visibility = ["//visibility:public"])
+
+toolchain_type(
+    name = "toolchain_type",
+)
+
+asc_toolchain(
+    name = "asc",
+)
+
+toolchain(
+    name = "asc_toolchain",
+    toolchain = ":asc",
+    toolchain_type = ":toolchain_type",
+)

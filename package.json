@@ -1,0 +1,14 @@
+{
+  "name": "ascbazel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.17.11",
+    "as-wasi": "^0.4.4"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.17.11"
+  }
+}
